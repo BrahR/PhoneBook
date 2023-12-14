@@ -13,3 +13,10 @@ moved the print methods into Admin to able to check for valid phone numbers if t
 added a new method to check for validation while printing contacts
 Added a print method that prints a file that have all the contacts
 Switched for buffer reader because of spaces in names
+
+
+12/14/2023
+
+added log in methods
+added register methods
+added register confirmations (Duplicate registertion)
