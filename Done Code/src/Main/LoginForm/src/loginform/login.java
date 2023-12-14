@@ -260,7 +260,10 @@ public class login extends javax.swing.JFrame {
                {
                    
                    conts.isValidLogin(filledEmail, filledPassword);
-                   
+                            NewJFrame app = new NewJFrame();
+                            app.setVisible(true);
+                            app.pack();
+                            app.setLocationRelativeTo(null);
                    
 
                }else{
