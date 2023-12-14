@@ -267,9 +267,10 @@ public class SignUp extends javax.swing.JFrame {
           if (conts.isValidContact(filledEmail)) {
 
             conts.registerConfirmation(filledEmail, filledPassword);
-            JOptionPane.showMessageDialog(null,
-                "Welcome.",
-                "Registration successful", JOptionPane.INFORMATION_MESSAGE);
+                            NewJFrame app = new NewJFrame();
+                            app.setVisible(true);
+                            app.pack();
+                            app.setLocationRelativeTo(null);
           }
 
           else {

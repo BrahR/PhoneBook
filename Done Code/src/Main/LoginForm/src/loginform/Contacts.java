@@ -79,7 +79,7 @@ public class Contacts {
 
     for (int i = 0; i < contacts.size(); i++) {
       if (email.equals(contacts.get(i).getEmail()) && password.equals(contacts.get(i).getPassword())) {
-        System.out.println("Welcome, " + contacts.get(i).getName());
+
         return true;
       }
     }
