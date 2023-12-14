@@ -1,4 +1,4 @@
-package Main;
+package loginform;
 
 public class Contact {
   private String name = "";

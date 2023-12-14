@@ -1,4 +1,4 @@
-package Main;
+package loginform;
 
 import java.util.ArrayList;
 
@@ -22,8 +22,8 @@ public class Contacts {
 
   }
 
-  protected void addContact(User obj) {
-    contacts.add(new Contact(obj.getEmail(), obj.getPassword()));
+  protected void addContact(Contact obj) {
+    contacts.add(obj);
     System.out.println("Contact added");
   }
 
