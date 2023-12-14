@@ -1,0 +1,15 @@
+added a separate class for admin methods to make the terminal look more friendly
+fixed the problem where validPhone wasn't working as expected by removing the new instance of the Admin class and instead using instance that is saved into an var
+modified the regex to be dynamic
+added and finished all admin privileges
+made the arraylists in the Admin class static
+
+11/19/2023
+
+removed all the methods from  Main and instead used calling from Methods class
+removed User class and renamed Admin to User
+Added a boolean attribute isAdmin to check for user and Admin modes
+moved the print methods into Admin to able to check for valid phone numbers if the admin changed any of the constraints
+added a new method to check for validation while printing contacts
+Added a print method that prints a file that have all the contacts
+Switched for buffer reader because of spaces in names
