@@ -268,6 +268,8 @@ public class login extends javax.swing.JFrame {
                     app.setVisible(true);
                     app.pack();
                     app.setLocationRelativeTo(null);
+                    this.dispose(); 
+
                 } else {
                     JOptionPane.showMessageDialog(null,
                             "Invalid Email or password",

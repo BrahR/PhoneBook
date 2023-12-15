@@ -288,6 +288,7 @@ public class SignUp extends javax.swing.JFrame {
                 app.setVisible(true);
                 app.pack();
                 app.setLocationRelativeTo(null);
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(null,
                         "Already registered",
@@ -319,6 +320,7 @@ public class SignUp extends javax.swing.JFrame {
     LoginFrame.setVisible(true);
     LoginFrame.pack();
     LoginFrame.setLocationRelativeTo(null);
+    this.dispose();
   }// GEN-LAST:event_jButton2ActionPerformed
 
   private void Disable2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_Disable2MouseClicked
