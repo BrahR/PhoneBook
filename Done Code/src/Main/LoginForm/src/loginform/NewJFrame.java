@@ -71,20 +71,25 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Form"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setName("jPanel1"); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(25, 118, 211));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setName("jPanel2"); // NOI18N
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Name.setText("sad");
         Name.setToolTipText("");
         Name.setName("Name"); // NOI18N
+        jPanel2.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 148, 361, 49));
 
         phoneNumber.setText("01000627666");
         phoneNumber.setName("phoneNumber"); // NOI18N
+        jPanel2.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, 360, 49));
 
         clearButton.setBackground(new java.awt.Color(240, 240, 240));
         clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -97,6 +102,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 clearButtonActionPerformed(evt);
             }
         });
+        jPanel2.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 396, 165, 41));
 
         addButton.setBackground(new java.awt.Color(240, 240, 240));
         addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -109,6 +115,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 addButtonActionPerformed(evt);
             }
         });
+        jPanel2.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 396, 165, 41));
 
         deleteBook.setBackground(new java.awt.Color(240, 240, 240));
         deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -121,6 +128,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 deleteBookActionPerformed(evt);
             }
         });
+        jPanel2.add(deleteBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 328, 165, 41));
 
         updateButton.setBackground(new java.awt.Color(240, 240, 240));
         updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -133,6 +141,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 updateButtonActionPerformed(evt);
             }
         });
+        jPanel2.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 475, 165, 41));
 
         NameLable.setBackground(new java.awt.Color(255, 255, 255));
         NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -140,6 +149,7 @@ public class NewJFrame extends javax.swing.JFrame {
         NameLable.setLabelFor(NameLable);
         NameLable.setText("Name");
         NameLable.setName("NameLable"); // NOI18N
+        jPanel2.add(NameLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 118, 392, -1));
 
         phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
         phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -147,10 +157,12 @@ public class NewJFrame extends javax.swing.JFrame {
         phoneLable1.setLabelFor(phoneNumber);
         phoneLable1.setText("Phone Number");
         phoneLable1.setName("phoneLable1"); // NOI18N
+        jPanel2.add(phoneLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 392, -1));
 
         addressF.setText("sad123");
         addressF.setToolTipText("");
         addressF.setName("addressF"); // NOI18N
+        jPanel2.add(addressF, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 245, 361, 49));
 
         NameLable1.setBackground(new java.awt.Color(255, 255, 255));
         NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -158,6 +170,7 @@ public class NewJFrame extends javax.swing.JFrame {
         NameLable1.setLabelFor(NameLable);
         NameLable1.setText("Address");
         NameLable1.setName("NameLable1"); // NOI18N
+        jPanel2.add(NameLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, 398, -1));
 
         deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
         deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -175,71 +188,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 deleteButton1ActionPerformed(evt);
             }
         });
+        jPanel2.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 475, 165, 41));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(NameLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(phoneLable1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addComponent(NameLable1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(addressF, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(31, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(deleteBook, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(deleteButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                        .addGap(62, 62, 62)
-                        .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(phoneLable1)
-                .addGap(14, 14, 14)
-                .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NameLable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NameLable1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addressF, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(deleteBook, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, -1));
 
         jScrollPane1.setName("jScrollPane1"); // NOI18N
 
@@ -274,6 +225,8 @@ public class NewJFrame extends javax.swing.JFrame {
         booked.setShowGrid(true);
         jScrollPane1.setViewportView(booked);
 
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 23, -1, 489));
+
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 51, 51));
         jButton1.setText("Logout");
@@ -286,50 +239,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 654, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
-                .addComponent(jScrollPane1)
-                .addGap(122, 122, 122))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
-                        .addGap(167, 167, 167))))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 286, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         jPanel1.getAccessibleContext().setAccessibleName("Book phone");
 
         pack();
