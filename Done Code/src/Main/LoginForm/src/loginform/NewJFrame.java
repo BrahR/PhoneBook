@@ -532,15 +532,11 @@ public class NewJFrame extends javax.swing.JFrame {
                                 conts.deleteContactsViaEmail(userEmail);
                                 JOptionPane.showMessageDialog(null, "Your account has been deleted",
                                                 "Deletion complete", JOptionPane.ERROR_MESSAGE);
-<<<<<<< HEAD
                                         SignUp SignUpFrame = new SignUp();
                                         SignUpFrame.setVisible(true);
                                         SignUpFrame.pack();
                                         SignUpFrame.setLocationRelativeTo(null);
                                         this.dispose();
-=======
-                                                // return to sign up page
->>>>>>> 4a0f1cfbd653150ff2d35771d8470875db9e4b10
                         }
 
                 } else {
