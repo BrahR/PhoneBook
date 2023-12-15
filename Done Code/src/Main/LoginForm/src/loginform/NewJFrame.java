@@ -36,6 +36,9 @@ public class NewJFrame extends javax.swing.JFrame {
                                                 co.getAddress() });
                         }
                 }
+                ((AbstractTableModel) booked.getModel()).fireTableDataChanged();
+                pack(); // Resize the JFrame based on its contents
+                setLocationRelativeTo(null); // Center the JFrame on the screen
         }
 
         /**
@@ -55,12 +58,13 @@ public class NewJFrame extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
+        // <editor-fold defaultstate="collapsed" desc="Generated
         // Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
                 jTextField2 = new javax.swing.JTextField();
                 jPanel1 = new javax.swing.JPanel();
-                jPanel2 = new javax.swing.JPanel();
+                userDashboard = new javax.swing.JPanel();
                 Name = new javax.swing.JTextField();
                 phoneNumber = new javax.swing.JTextField();
                 clearButton = new javax.swing.JButton();
@@ -83,23 +87,29 @@ public class NewJFrame extends javax.swing.JFrame {
                 setName("Form"); // NOI18N
                 getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-                jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+                jPanel1.setBackground(new java.awt.Color(25, 118, 211));
                 jPanel1.setName("jPanel1"); // NOI18N
                 jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-                jPanel2.setBackground(new java.awt.Color(25, 118, 211));
-                jPanel2.setForeground(new java.awt.Color(255, 255, 255));
-                jPanel2.setName("jPanel2"); // NOI18N
-                jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                userDashboard.setBackground(new java.awt.Color(25, 118, 211));
+                userDashboard.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED,
+                                java.awt.Color.white, java.awt.Color.white, java.awt.Color.white,
+                                java.awt.Color.white));
+                userDashboard.setForeground(new java.awt.Color(255, 255, 255));
+                userDashboard.setToolTipText("");
+                userDashboard.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+                userDashboard.setName("userDashboard"); // NOI18N
+                userDashboard.setOpaque(false);
+                userDashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
                 Name.setText("sad");
                 Name.setToolTipText("");
                 Name.setName("Name"); // NOI18N
-                jPanel2.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 148, 361, 49));
+                userDashboard.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 148, 361, 49));
 
                 phoneNumber.setText("01000627666");
                 phoneNumber.setName("phoneNumber"); // NOI18N
-                jPanel2.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, 360, 49));
+                userDashboard.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, 360, 49));
 
                 clearButton.setBackground(new java.awt.Color(240, 240, 240));
                 clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -113,7 +123,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                 clearButtonActionPerformed(evt);
                         }
                 });
-                jPanel2.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 396, 165, 41));
+                userDashboard.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 396, 165, 41));
 
                 addButton.setBackground(new java.awt.Color(240, 240, 240));
                 addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -127,7 +137,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                 addButtonActionPerformed(evt);
                         }
                 });
-                jPanel2.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 396, 165, 41));
+                userDashboard.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 396, 165, 41));
 
                 deleteBook.setBackground(new java.awt.Color(240, 240, 240));
                 deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -141,7 +151,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                 deleteBookActionPerformed(evt);
                         }
                 });
-                jPanel2.add(deleteBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 328, 165, 41));
+                userDashboard.add(deleteBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 328, 165, 41));
 
                 updateButton.setBackground(new java.awt.Color(240, 240, 240));
                 updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -155,7 +165,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                 updateButtonActionPerformed(evt);
                         }
                 });
-                jPanel2.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 475, 165, 41));
+                userDashboard.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 475, 165, 41));
 
                 NameLable.setBackground(new java.awt.Color(255, 255, 255));
                 NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -164,7 +174,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 NameLable.setLabelFor(NameLable);
                 NameLable.setText("Name");
                 NameLable.setName("NameLable"); // NOI18N
-                jPanel2.add(NameLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 118, 392, -1));
+                userDashboard.add(NameLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 118, 392, -1));
 
                 phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
                 phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -173,12 +183,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 phoneLable1.setLabelFor(phoneNumber);
                 phoneLable1.setText("Phone Number");
                 phoneLable1.setName("phoneLable1"); // NOI18N
-                jPanel2.add(phoneLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 392, -1));
+                userDashboard.add(phoneLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 392, -1));
 
                 addressF.setText("sad123");
                 addressF.setToolTipText("");
                 addressF.setName("addressF"); // NOI18N
-                jPanel2.add(addressF, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 245, 361, 49));
+                userDashboard.add(addressF, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 245, 361, 49));
 
                 NameLable1.setBackground(new java.awt.Color(255, 255, 255));
                 NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -187,7 +197,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 NameLable1.setLabelFor(NameLable);
                 NameLable1.setText("Address");
                 NameLable1.setName("NameLable1"); // NOI18N
-                jPanel2.add(NameLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, 398, -1));
+                userDashboard.add(NameLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, 398, -1));
 
                 deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
                 deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -206,9 +216,9 @@ public class NewJFrame extends javax.swing.JFrame {
                                 deleteButton1ActionPerformed(evt);
                         }
                 });
-                jPanel2.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 475, 165, 41));
+                userDashboard.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 475, 165, 41));
 
-                jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, -1));
+                jPanel1.add(userDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, 540));
 
                 jScrollPane1.setName("jScrollPane1"); // NOI18N
 
@@ -343,7 +353,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                                                         if (!phone.equals(objectEPhone)) {
                                                                                 String enPhone = PhoneNumberEncryptor
                                                                                                 .encrypt(phone);
-                                                                                model1.setValueAt(enPhone, i,
+                                                                                model1.setValueAt(phone, i,
                                                                                                 2);
                                                                                 search.setPhone(phone);
                                                                                 search.setephone(enPhone);
@@ -386,9 +396,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                         }
                                 } catch (Exception e) {
                                         e.printStackTrace();
-                                        JOptionPane.showMessageDialog(null,
-                                                        "Error while encrypting the phone number",
-                                                        "Encryption Error", JOptionPane.ERROR_MESSAGE);
+
                                 }
                         }
                 }
@@ -409,64 +417,87 @@ public class NewJFrame extends javax.swing.JFrame {
         }// GEN-LAST:event_clearButtonActionPerformed
 
         private void deleteBookActionPerformed(java.awt.event.ActionEvent evt) {
-                String idToDelete = JOptionPane.showInputDialog("Enter your ID:");
-                String emailToDelete = JOptionPane.showInputDialog("Enter your Email:");
+                int rowCount = booked.getRowCount();
 
-                if (idToDelete != null && !idToDelete.isEmpty()) {
-                        int id = Integer.parseInt(idToDelete);
+                if (rowCount > 0) {
+                        int[] selectedRows = booked.getSelectedRows();
 
-                        if (id > 0) {
-                                if (conts.idExists(id)) {
-                                        if (conts.emailExists(emailToDelete)) {
-                                                try {
-                                                        Contact userToDelete = conts.returnBook(emailToDelete, id);
-                                                        System.out.println(userToDelete.getBook());
-                                                        String en = userToDelete.geteEmail();
-                                                        DefaultTableModel model = (DefaultTableModel) booked.getModel();
-                                                        for (int i = 0; i < model.getRowCount(); i++) {
-                                                                if (model.getValueAt(i, 0).equals(en)) {
-                                                                        model.removeRow(i);
-                                                                        conts.deleteBookedContactsViaEmail(
-                                                                                        emailToDelete);
-                                                                        use.displayAll();
-                                                                        break;
+                        if (selectedRows.length > 0) {
+                                String idToDelete = JOptionPane.showInputDialog("Enter your ID:");
+                                String emailToDelete = JOptionPane.showInputDialog("Enter your Email:");
+
+                                if (idToDelete != null && !idToDelete.isEmpty()) {
+                                        int id = Integer.parseInt(idToDelete);
+
+                                        if (id > 0) {
+                                                if (conts.idExists(id)) {
+                                                        if (conts.emailExists(emailToDelete)) {
+                                                                try {
+                                                                        DefaultTableModel model = (DefaultTableModel) booked
+                                                                                        .getModel();
+
+                                                                        for (int i = selectedRows.length
+                                                                                        - 1; i >= 0; i--) {
+                                                                                int row = selectedRows[i];
+                                                                                String en = (String) model
+                                                                                                .getValueAt(row, 0);
+
+                                                                                model.removeRow(row);
+                                                                                conts.deleteBookedContactsViaEmail(
+                                                                                                emailToDelete);
+                                                                                use.displayAll();
+                                                                        }
+
+                                                                        // Display a message indicating successful
+                                                                        // deletion
+                                                                        JOptionPane.showMessageDialog(null,
+                                                                                        "Selected bookings have been deleted successfully.",
+                                                                                        "Deletion Successful",
+                                                                                        JOptionPane.INFORMATION_MESSAGE);
+
+                                                                } catch (Exception e) {
+                                                                        e.printStackTrace(); // Handle the exception
+                                                                                             // appropriately for your
+                                                                                             // application
                                                                 }
+                                                        } else {
+                                                                JOptionPane.showMessageDialog(null,
+                                                                                "Email not found. Deletion failed.",
+                                                                                "Deletion Failed",
+                                                                                JOptionPane.ERROR_MESSAGE);
                                                         }
-                                                        // Display a message indicating successful deletion
+                                                } else {
+                                                        // Display a message indicating that the ID does not exist
                                                         JOptionPane.showMessageDialog(null,
-                                                                        "Your booking has been deleted successfully.",
-                                                                        "Deletion Successful",
-                                                                        JOptionPane.INFORMATION_MESSAGE);
-
-                                                } catch (Exception e) {
-                                                        e.printStackTrace(); // Handle the exception appropriately for
-                                                                             // your
-                                                                             // application
+                                                                        "ID not found. Deletion failed.",
+                                                                        "Deletion Failed",
+                                                                        JOptionPane.WARNING_MESSAGE);
                                                 }
                                         } else {
-                                                JOptionPane.showMessageDialog(null, "Email not found. Deletion failed.",
-                                                                "Deletion Failed",
-                                                                JOptionPane.ERROR_MESSAGE);
+                                                // Display a message indicating that the ID is not valid
+                                                JOptionPane.showMessageDialog(null,
+                                                                "Invalid ID. Please enter a positive integer.",
+                                                                "Deletion Failed", JOptionPane.WARNING_MESSAGE);
                                         }
-
                                 } else {
-                                        // Display a message indicating that the ID does not exist
-                                        JOptionPane.showMessageDialog(null, "ID not found. Deletion failed.",
-                                                        "Deletion Failed",
+                                        // Display a message indicating that the user canceled the deletion process
+                                        JOptionPane.showMessageDialog(null,
+                                                        "Deletion canceled. No ID or phone number entered.",
+                                                        "Deletion Canceled",
                                                         JOptionPane.WARNING_MESSAGE);
                                 }
                         } else {
-                                // Display a message indicating that the ID is not valid
-                                JOptionPane.showMessageDialog(null, "Invalid ID. Please enter a positive integer.",
-                                                "Deletion Failed", JOptionPane.WARNING_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Please select the rows you want to delete",
+                                                "Deletion Canceled",
+                                                JOptionPane.WARNING_MESSAGE);
                         }
                 } else {
-                        // Display a message indicating that the user canceled the deletion process
-                        JOptionPane.showMessageDialog(null, "Deletion canceled. No ID or phone number entered.",
+                        JOptionPane.showMessageDialog(null, "The table is empty. Nothing to delete.",
                                         "Deletion Canceled",
                                         JOptionPane.WARNING_MESSAGE);
                 }
         }
+
         // GEN-LAST:event_deleteBookActionPerformed
 
         private void deleteButton1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -476,11 +507,10 @@ public class NewJFrame extends javax.swing.JFrame {
                         if (conts.emailExists(userEmail)) {
                                 System.out.println("Found your email for deleteion");
                                 Contact obj = conts.returnEmailObj(userEmail);
-                                System.out.println(obj.geteEmail());
-                                String encrypted = obj.geteEmail();
+                                String email = obj.getEmail();
                                 DefaultTableModel model = (DefaultTableModel) booked.getModel();
                                 for (int i = 0; i < model.getRowCount(); i++) {
-                                        if (model.getValueAt(i, 0).equals(encrypted)) {
+                                        if (model.getValueAt(i, 0).equals(email)) {
                                                 model.removeRow(i);
                                         }
                                         conts.deleteAccount(userEmail);
@@ -583,8 +613,8 @@ public class NewJFrame extends javax.swing.JFrame {
                                                         obj.setBook(1);
                                                         conts.addContact(obj); // Use the addContact method consistently
                                                         System.out.println(obj.getID());
-                                                        model.addRow(new Object[] { encryptedEmail, name,
-                                                                        encryptedPhone,
+                                                        model.addRow(new Object[] { objEmail, name,
+                                                                        phone,
                                                                         address });
                                                         use.displayAll();
                                                         if (!phone.isEmpty() || !name.isEmpty()
@@ -608,9 +638,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                         }
                                 } catch (Exception e) {
                                         e.printStackTrace();
-                                        JOptionPane.showMessageDialog(null,
-                                                        "Error while encrypting the phone number",
-                                                        "Encryption Error", JOptionPane.ERROR_MESSAGE);
+
                                 }
                         }
                 }
@@ -674,10 +702,10 @@ public class NewJFrame extends javax.swing.JFrame {
         private javax.swing.JButton deleteButton1;
         private javax.swing.JButton jButton1;
         private javax.swing.JPanel jPanel1;
-        private javax.swing.JPanel jPanel2;
         private javax.swing.JTextField jTextField2;
         private javax.swing.JLabel phoneLable1;
         private javax.swing.JTextField phoneNumber;
         private javax.swing.JButton updateButton;
+        private javax.swing.JPanel userDashboard;
         // End of variables declaration//GEN-END:variables
 }
