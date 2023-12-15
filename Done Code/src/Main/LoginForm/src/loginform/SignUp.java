@@ -284,7 +284,7 @@ public class SignUp extends javax.swing.JFrame {
                         System.out.println(obj1.getEmail() +" "+obj1.getPass());
 
                 // Proceed with the rest of your application logic (e.g., opening a new frame)
-                NewJFrame app = new NewJFrame();
+                NewJFrame app = new NewJFrame(filledEmail);
                 app.setVisible(true);
                 app.pack();
                 app.setLocationRelativeTo(null);

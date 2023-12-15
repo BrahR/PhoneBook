@@ -21,12 +21,21 @@ public class NewJFrame extends javax.swing.JFrame {
         /**
          * Creates new form NewJFrame
          */
-        public NewJFrame() {
+        public NewJFrame(String email) {
                 initComponents();
                 setTitle("Book Phone"); // Set the title of the JFrame
                 ImageIcon icon = new ImageIcon("src\\main\\java\\com\\mycompany\\swing\\Icons\\4298389.png");
                 setIconImage(icon.getImage()); // Set the program icon
 
+                // LOAD table
+                ArrayList<Contact> tableValues = conts.returnBookedOBjs(email);
+                if (tableValues.size() != 0) {
+                        DefaultTableModel model = (DefaultTableModel) booked.getModel();
+                        for (Contact co : tableValues) {
+                                model.addRow(new Object[] { co.getEmail(), co.getName(), co.getPhone(),
+                                                co.getAddress() });
+                        }
+                }
         }
 
         /**
@@ -45,219 +54,228 @@ public class NewJFrame extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        // <editor-fold defaultstate="collapsed" desc="Generated
+        // Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
 
-        jTextField2 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        Name = new javax.swing.JTextField();
-        phoneNumber = new javax.swing.JTextField();
-        clearButton = new javax.swing.JButton();
-        addButton = new javax.swing.JButton();
-        deleteBook = new javax.swing.JButton();
-        updateButton = new javax.swing.JButton();
-        NameLable = new javax.swing.JLabel();
-        phoneLable1 = new javax.swing.JLabel();
-        addressF = new javax.swing.JTextField();
-        NameLable1 = new javax.swing.JLabel();
-        deleteButton1 = new javax.swing.JButton();
-        javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
-        booked = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+                jTextField2 = new javax.swing.JTextField();
+                jPanel1 = new javax.swing.JPanel();
+                jPanel2 = new javax.swing.JPanel();
+                Name = new javax.swing.JTextField();
+                phoneNumber = new javax.swing.JTextField();
+                clearButton = new javax.swing.JButton();
+                addButton = new javax.swing.JButton();
+                deleteBook = new javax.swing.JButton();
+                updateButton = new javax.swing.JButton();
+                NameLable = new javax.swing.JLabel();
+                phoneLable1 = new javax.swing.JLabel();
+                addressF = new javax.swing.JTextField();
+                NameLable1 = new javax.swing.JLabel();
+                deleteButton1 = new javax.swing.JButton();
+                javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
+                booked = new javax.swing.JTable();
+                jButton1 = new javax.swing.JButton();
 
-        jTextField2.setText("jTextField1");
-        jTextField2.setName("jTextField2"); // NOI18N
+                jTextField2.setText("jTextField1");
+                jTextField2.setName("jTextField2"); // NOI18N
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("Form"); // NOI18N
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+                setName("Form"); // NOI18N
+                getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setName("jPanel1"); // NOI18N
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+                jPanel1.setName("jPanel1"); // NOI18N
+                jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(25, 118, 211));
-        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.setName("jPanel2"); // NOI18N
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                jPanel2.setBackground(new java.awt.Color(25, 118, 211));
+                jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+                jPanel2.setName("jPanel2"); // NOI18N
+                jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Name.setText("sad");
-        Name.setToolTipText("");
-        Name.setName("Name"); // NOI18N
-        jPanel2.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 148, 361, 49));
+                Name.setText("sad");
+                Name.setToolTipText("");
+                Name.setName("Name"); // NOI18N
+                jPanel2.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 148, 361, 49));
 
-        phoneNumber.setText("01000627666");
-        phoneNumber.setName("phoneNumber"); // NOI18N
-        jPanel2.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, 360, 49));
+                phoneNumber.setText("01000627666");
+                phoneNumber.setName("phoneNumber"); // NOI18N
+                jPanel2.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, 360, 49));
 
-        clearButton.setBackground(new java.awt.Color(240, 240, 240));
-        clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        clearButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/eraser.png"))); // NOI18N
-        clearButton.setText("Clear");
-        clearButton.setBorder(null);
-        clearButton.setName("clearButton"); // NOI18N
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
-            }
-        });
-        jPanel2.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 396, 165, 41));
+                clearButton.setBackground(new java.awt.Color(240, 240, 240));
+                clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                clearButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/eraser.png"))); // NOI18N
+                clearButton.setText("Clear");
+                clearButton.setBorder(null);
+                clearButton.setName("clearButton"); // NOI18N
+                clearButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                clearButtonActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 396, 165, 41));
 
-        addButton.setBackground(new java.awt.Color(240, 240, 240));
-        addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/add.png"))); // NOI18N
-        addButton.setText("Book");
-        addButton.setBorder(null);
-        addButton.setName("addButton"); // NOI18N
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
-        jPanel2.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 396, 165, 41));
+                addButton.setBackground(new java.awt.Color(240, 240, 240));
+                addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                addButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/add.png"))); // NOI18N
+                addButton.setText("Book");
+                addButton.setBorder(null);
+                addButton.setName("addButton"); // NOI18N
+                addButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                addButtonActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 396, 165, 41));
 
-        deleteBook.setBackground(new java.awt.Color(240, 240, 240));
-        deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        deleteBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
-        deleteBook.setText("Delete Booking");
-        deleteBook.setBorder(null);
-        deleteBook.setName("deleteBook"); // NOI18N
-        deleteBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBookActionPerformed(evt);
-            }
-        });
-        jPanel2.add(deleteBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 328, 165, 41));
+                deleteBook.setBackground(new java.awt.Color(240, 240, 240));
+                deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                deleteBook.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
+                deleteBook.setText("Delete Booking");
+                deleteBook.setBorder(null);
+                deleteBook.setName("deleteBook"); // NOI18N
+                deleteBook.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteBookActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(deleteBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 328, 165, 41));
 
-        updateButton.setBackground(new java.awt.Color(240, 240, 240));
-        updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        updateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/updated.png"))); // NOI18N
-        updateButton.setText("Update");
-        updateButton.setBorder(null);
-        updateButton.setName("updateButton"); // NOI18N
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
-            }
-        });
-        jPanel2.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 475, 165, 41));
+                updateButton.setBackground(new java.awt.Color(240, 240, 240));
+                updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                updateButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/updated.png"))); // NOI18N
+                updateButton.setText("Update");
+                updateButton.setBorder(null);
+                updateButton.setName("updateButton"); // NOI18N
+                updateButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                updateButtonActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 475, 165, 41));
 
-        NameLable.setBackground(new java.awt.Color(255, 255, 255));
-        NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        NameLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/signature.png"))); // NOI18N
-        NameLable.setLabelFor(NameLable);
-        NameLable.setText("Name");
-        NameLable.setName("NameLable"); // NOI18N
-        jPanel2.add(NameLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 118, 392, -1));
+                NameLable.setBackground(new java.awt.Color(255, 255, 255));
+                NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                NameLable.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/signature.png"))); // NOI18N
+                NameLable.setLabelFor(NameLable);
+                NameLable.setText("Name");
+                NameLable.setName("NameLable"); // NOI18N
+                jPanel2.add(NameLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 118, 392, -1));
 
-        phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
-        phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        phoneLable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/smartphone.png"))); // NOI18N
-        phoneLable1.setLabelFor(phoneNumber);
-        phoneLable1.setText("Phone Number");
-        phoneLable1.setName("phoneLable1"); // NOI18N
-        jPanel2.add(phoneLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 392, -1));
+                phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
+                phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                phoneLable1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/smartphone.png"))); // NOI18N
+                phoneLable1.setLabelFor(phoneNumber);
+                phoneLable1.setText("Phone Number");
+                phoneLable1.setName("phoneLable1"); // NOI18N
+                jPanel2.add(phoneLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 13, 392, -1));
 
-        addressF.setText("sad123");
-        addressF.setToolTipText("");
-        addressF.setName("addressF"); // NOI18N
-        jPanel2.add(addressF, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 245, 361, 49));
+                addressF.setText("sad123");
+                addressF.setToolTipText("");
+                addressF.setName("addressF"); // NOI18N
+                jPanel2.add(addressF, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 245, 361, 49));
 
-        NameLable1.setBackground(new java.awt.Color(255, 255, 255));
-        NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        NameLable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/address.png"))); // NOI18N
-        NameLable1.setLabelFor(NameLable);
-        NameLable1.setText("Address");
-        NameLable1.setName("NameLable1"); // NOI18N
-        jPanel2.add(NameLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, 398, -1));
+                NameLable1.setBackground(new java.awt.Color(255, 255, 255));
+                NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                NameLable1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/address.png"))); // NOI18N
+                NameLable1.setLabelFor(NameLable);
+                NameLable1.setText("Address");
+                NameLable1.setName("NameLable1"); // NOI18N
+                jPanel2.add(NameLable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, 398, -1));
 
-        deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
-        deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        deleteButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
-        deleteButton1.setText("Delete Account");
-        deleteButton1.setBorder(null);
-        deleteButton1.setName("deleteButton1"); // NOI18N
-        deleteButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                deleteButton1MouseClicked(evt);
-            }
-        });
-        deleteButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButton1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 475, 165, 41));
+                deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
+                deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                deleteButton1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
+                deleteButton1.setText("Delete Account");
+                deleteButton1.setBorder(null);
+                deleteButton1.setName("deleteButton1"); // NOI18N
+                deleteButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                deleteButton1MouseClicked(evt);
+                        }
+                });
+                deleteButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteButton1ActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 475, 165, 41));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, -1));
+                jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, -1));
 
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
+                jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-        booked.setBackground(new java.awt.Color(225, 225, 225));
-        booked.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        booked.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                booked.setBackground(new java.awt.Color(225, 225, 225));
+                booked.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                booked.setModel(new javax.swing.table.DefaultTableModel(
+                                new Object[][] {
 
-            },
-            new String [] {
-                "Email", "Name", "Phone Number", "Address"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
+                                },
+                                new String[] {
+                                                "Email", "Name", "Phone Number", "Address"
+                                }) {
+                        Class[] types = new Class[] {
+                                        java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                                        java.lang.String.class
+                        };
+                        boolean[] canEdit = new boolean[] {
+                                        false, false, false, false
+                        };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+                        public Class getColumnClass(int columnIndex) {
+                                return types[columnIndex];
+                        }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        booked.setFocusable(false);
-        booked.setGridColor(new java.awt.Color(255, 255, 255));
-        booked.setName("booked"); // NOI18N
-        booked.setShowGrid(true);
-        jScrollPane1.setViewportView(booked);
+                        public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return canEdit[columnIndex];
+                        }
+                });
+                booked.setFocusable(false);
+                booked.setGridColor(new java.awt.Color(255, 255, 255));
+                booked.setName("booked"); // NOI18N
+                booked.setShowGrid(true);
+                jScrollPane1.setViewportView(booked);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 23, -1, 489));
+                jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 23, -1, 489));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 51, 51));
-        jButton1.setText("Logout");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setName("jButton1"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 654, -1, -1));
+                jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+                jButton1.setForeground(new java.awt.Color(255, 51, 51));
+                jButton1.setText("Logout");
+                jButton1.setBorder(null);
+                jButton1.setBorderPainted(false);
+                jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+                jButton1.setName("jButton1"); // NOI18N
+                jButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton1ActionPerformed(evt);
+                        }
+                });
+                jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 654, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        jPanel1.getAccessibleContext().setAccessibleName("Book phone");
+                getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+                jPanel1.getAccessibleContext().setAccessibleName("Book phone");
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+                pack();
+        }// </editor-fold>//GEN-END:initComponents
 
-    private void deleteButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButton1MouseClicked
-        
-    }//GEN-LAST:event_deleteButton1MouseClicked
+        private void deleteButton1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_deleteButton1MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        login LoginFrame = new login();
-        LoginFrame.setVisible(true);
-        LoginFrame.pack();
-        LoginFrame.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        }// GEN-LAST:event_deleteButton1MouseClicked
+
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
+                login LoginFrame = new login();
+                LoginFrame.setVisible(true);
+                LoginFrame.pack();
+                LoginFrame.setLocationRelativeTo(null);
+                this.dispose();
+        }// GEN-LAST:event_jButton1ActionPerformed
 
         private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {
                 String name = Name.getText();
@@ -470,11 +488,11 @@ public class NewJFrame extends javax.swing.JFrame {
                                 conts.deleteContactsViaEmail(userEmail);
                                 JOptionPane.showMessageDialog(null, "Your account has been deleted",
                                                 "Deletion complete", JOptionPane.ERROR_MESSAGE);
-                                        SignUp SignUpFrame = new SignUp();
-                                        SignUpFrame.setVisible(true);
-                                        SignUpFrame.pack();
-                                        SignUpFrame.setLocationRelativeTo(null);
-                                        this.dispose();
+                                SignUp SignUpFrame = new SignUp();
+                                SignUpFrame.setVisible(true);
+                                SignUpFrame.pack();
+                                SignUpFrame.setLocationRelativeTo(null);
+                                this.dispose();
                         }
 
                 } else {
@@ -644,22 +662,22 @@ public class NewJFrame extends javax.swing.JFrame {
                 });
         }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Name;
-    private javax.swing.JLabel NameLable;
-    private javax.swing.JLabel NameLable1;
-    private javax.swing.JButton addButton;
-    private javax.swing.JTextField addressF;
-    private javax.swing.JTable booked;
-    private javax.swing.JButton clearButton;
-    private javax.swing.JButton deleteBook;
-    private javax.swing.JButton deleteButton1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JLabel phoneLable1;
-    private javax.swing.JTextField phoneNumber;
-    private javax.swing.JButton updateButton;
-    // End of variables declaration//GEN-END:variables
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JTextField Name;
+        private javax.swing.JLabel NameLable;
+        private javax.swing.JLabel NameLable1;
+        private javax.swing.JButton addButton;
+        private javax.swing.JTextField addressF;
+        private javax.swing.JTable booked;
+        private javax.swing.JButton clearButton;
+        private javax.swing.JButton deleteBook;
+        private javax.swing.JButton deleteButton1;
+        private javax.swing.JButton jButton1;
+        private javax.swing.JPanel jPanel1;
+        private javax.swing.JPanel jPanel2;
+        private javax.swing.JTextField jTextField2;
+        private javax.swing.JLabel phoneLable1;
+        private javax.swing.JTextField phoneNumber;
+        private javax.swing.JButton updateButton;
+        // End of variables declaration//GEN-END:variables
 }

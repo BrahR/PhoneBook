@@ -234,4 +234,14 @@ public class Contacts {
     }
   }
 
+  public ArrayList <Contact> returnBookedOBjs(String email) {
+    ArrayList<Contact> objs = new ArrayList<>();
+    for (Contact co : contacts) {
+      if (co.getEmail().equals(email) && co.getBook() == 1) {
+        objs.add(co);
+      }
+    }
+    return objs;
+  }
+
 }

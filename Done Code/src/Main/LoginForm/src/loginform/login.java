@@ -264,7 +264,7 @@ public class login extends javax.swing.JFrame {
             if (use.isValidPassword(filledPassword)) {
                 Contact obj = new Contact();
                 if (conts.isValidLogin(filledEmail, filledPassword)) {
-                    NewJFrame app = new NewJFrame();
+                    NewJFrame app = new NewJFrame(filledEmail);
                     app.setVisible(true);
                     app.pack();
                     app.setLocationRelativeTo(null);
