@@ -5,6 +5,8 @@
 package loginform;
 
 import java.awt.*;
+
+import javax.lang.model.util.ElementScanner14;
 import javax.swing.*;
 import javax.swing.table.*;
 import java.util.*;
@@ -502,9 +504,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
         private void deleteButton1ActionPerformed(java.awt.event.ActionEvent evt) {
                 String userEmail = JOptionPane.showInputDialog(null, "Enter your Email for confirmation:");
+                int userID = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your ID for confirmation:"));
+                if (userEmail != null && !userEmail.isEmpty() && userID != 0) {
 
-                if (userEmail != null && !userEmail.isEmpty()) {
-                        if (conts.emailExists(userEmail)) {
+                        if (conts.emailAndIdExists(userID, userEmail)) {
                                 System.out.println("Found your email for deleteion");
                                 Contact obj = conts.returnEmailObj(userEmail);
                                 String email = obj.getEmail();
@@ -523,10 +526,14 @@ public class NewJFrame extends javax.swing.JFrame {
                                 SignUpFrame.pack();
                                 SignUpFrame.setLocationRelativeTo(null);
                                 this.dispose();
+                        } else {
+                                JOptionPane.showMessageDialog(null,
+                                                "this account connected this ID isn't in the system",
+                                                "Invalid Account", JOptionPane.ERROR_MESSAGE);
                         }
 
                 } else {
-                        JOptionPane.showMessageDialog(null, "this account isn't in the system",
+                        JOptionPane.showMessageDialog(null, "Invalid Id or Email",
                                         "Invalid Account", JOptionPane.ERROR_MESSAGE);
                 }
                 try {
