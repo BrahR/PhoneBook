@@ -255,13 +255,14 @@ public class User extends Contact {
       System.err.println("No Contacts to print");
     } else {
       for (int i = 0; i < Contacts.contacts.size(); i++) {
-        System.out.println("contact ID : " + (i + 1));
+        System.out.println("contact ID : " + (Contacts.contacts.get(i).getID()));
         System.out.println("Contact Name : " + Contacts.contacts.get(i).getName());
         System.out.println("Contact Number : " + Contacts.contacts.get(i).getPhone()
             + (validPhoneForPrint(Contacts.contacts.get(i).getPhone()) ? " (valid)"
                 : " \"Invalid phone number please Contact the user\""));
-
+        System.out.println("Book status : " + Contacts.contacts.get(i).getBook());
         System.out.println("Contact Email : " + Contacts.contacts.get(i).getEmail());
+        System.out.println("en Contact Email : " + Contacts.contacts.get(i).geteEmail());
         System.out.println();
       }
     }

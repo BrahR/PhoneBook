@@ -183,11 +183,14 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="Name">
               <Properties>
+                <Property name="text" type="java.lang.String" value="sad"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="name" type="java.lang.String" value="Name" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="phoneNumber">
               <Properties>
+                <Property name="text" type="java.lang.String" value="01000627666"/>
                 <Property name="name" type="java.lang.String" value="phoneNumber" noResource="true"/>
               </Properties>
             </Component>
@@ -313,6 +316,8 @@
             </Component>
             <Component class="javax.swing.JTextField" name="addressF">
               <Properties>
+                <Property name="text" type="java.lang.String" value="sad123"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="name" type="java.lang.String" value="addressF" noResource="true"/>
               </Properties>
             </Component>

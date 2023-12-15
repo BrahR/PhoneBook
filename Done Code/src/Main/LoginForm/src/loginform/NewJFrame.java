@@ -7,6 +7,7 @@ package loginform;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
+import java.util.*;
 
 /**
  *
@@ -42,365 +43,493 @@ public class NewJFrame extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        // <editor-fold defaultstate="collapsed" desc="Generated
+        // <editor-fold defaultstate="collapsed" desc="Generated
+        // Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
 
-        jTextField2 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        Name = new javax.swing.JTextField();
-        phoneNumber = new javax.swing.JTextField();
-        clearButton = new javax.swing.JButton();
-        addButton = new javax.swing.JButton();
-        deleteBook = new javax.swing.JButton();
-        updateButton = new javax.swing.JButton();
-        NameLable = new javax.swing.JLabel();
-        phoneLable1 = new javax.swing.JLabel();
-        addressF = new javax.swing.JTextField();
-        NameLable1 = new javax.swing.JLabel();
-        deleteButton1 = new javax.swing.JButton();
-        javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
-        booked = new javax.swing.JTable();
+                jTextField2 = new javax.swing.JTextField();
+                jPanel1 = new javax.swing.JPanel();
+                jPanel2 = new javax.swing.JPanel();
+                Name = new javax.swing.JTextField();
+                phoneNumber = new javax.swing.JTextField();
+                clearButton = new javax.swing.JButton();
+                addButton = new javax.swing.JButton();
+                deleteBook = new javax.swing.JButton();
+                updateButton = new javax.swing.JButton();
+                NameLable = new javax.swing.JLabel();
+                phoneLable1 = new javax.swing.JLabel();
+                addressF = new javax.swing.JTextField();
+                NameLable1 = new javax.swing.JLabel();
+                deleteButton1 = new javax.swing.JButton();
+                javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
+                booked = new javax.swing.JTable();
 
-        jTextField2.setText("jTextField1");
-        jTextField2.setName("jTextField2"); // NOI18N
+                jTextField2.setText("jTextField1");
+                jTextField2.setName("jTextField2"); // NOI18N
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("Form"); // NOI18N
+                setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+                setName("Form"); // NOI18N
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setName("jPanel1"); // NOI18N
+                jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+                jPanel1.setName("jPanel1"); // NOI18N
 
-        jPanel2.setBackground(new java.awt.Color(25, 118, 211));
-        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.setName("jPanel2"); // NOI18N
+                jPanel2.setBackground(new java.awt.Color(25, 118, 211));
+                jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+                jPanel2.setName("jPanel2"); // NOI18N
 
-        Name.setName("Name"); // NOI18N
+                Name.setText("sad");
+                Name.setToolTipText("");
+                Name.setName("Name"); // NOI18N
 
-        phoneNumber.setName("phoneNumber"); // NOI18N
+                phoneNumber.setText("01000627666");
+                phoneNumber.setName("phoneNumber"); // NOI18N
 
-        clearButton.setBackground(new java.awt.Color(240, 240, 240));
-        clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        clearButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/eraser.png"))); // NOI18N
-        clearButton.setText("Clear");
-        clearButton.setBorder(null);
-        clearButton.setName("clearButton"); // NOI18N
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
-            }
-        });
+                clearButton.setBackground(new java.awt.Color(240, 240, 240));
+                clearButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                clearButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/eraser.png"))); // NOI18N
+                clearButton.setText("Clear");
+                clearButton.setBorder(null);
+                clearButton.setName("clearButton"); // NOI18N
+                clearButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                clearButtonActionPerformed(evt);
+                        }
+                });
 
-        addButton.setBackground(new java.awt.Color(240, 240, 240));
-        addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/add.png"))); // NOI18N
-        addButton.setText("Book");
-        addButton.setBorder(null);
-        addButton.setName("addButton"); // NOI18N
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
+                addButton.setBackground(new java.awt.Color(240, 240, 240));
+                addButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                addButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/add.png"))); // NOI18N
+                addButton.setText("Book");
+                addButton.setBorder(null);
+                addButton.setName("addButton"); // NOI18N
+                addButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                addButtonActionPerformed(evt);
+                        }
+                });
 
-        deleteBook.setBackground(new java.awt.Color(240, 240, 240));
-        deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        deleteBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
-        deleteBook.setText("Delete Booking");
-        deleteBook.setBorder(null);
-        deleteBook.setName("deleteBook"); // NOI18N
-        deleteBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBookActionPerformed(evt);
-            }
-        });
+                deleteBook.setBackground(new java.awt.Color(240, 240, 240));
+                deleteBook.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                deleteBook.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
+                deleteBook.setText("Delete Booking");
+                deleteBook.setBorder(null);
+                deleteBook.setName("deleteBook"); // NOI18N
+                deleteBook.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteBookActionPerformed(evt);
+                        }
+                });
 
-        updateButton.setBackground(new java.awt.Color(240, 240, 240));
-        updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        updateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/updated.png"))); // NOI18N
-        updateButton.setText("Update");
-        updateButton.setBorder(null);
-        updateButton.setName("updateButton"); // NOI18N
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
-            }
-        });
+                updateButton.setBackground(new java.awt.Color(240, 240, 240));
+                updateButton.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                updateButton.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/updated.png"))); // NOI18N
+                updateButton.setText("Update");
+                updateButton.setBorder(null);
+                updateButton.setName("updateButton"); // NOI18N
+                updateButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                updateButtonActionPerformed(evt);
+                        }
+                });
 
-        NameLable.setBackground(new java.awt.Color(255, 255, 255));
-        NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        NameLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/signature.png"))); // NOI18N
-        NameLable.setLabelFor(NameLable);
-        NameLable.setText("Name");
-        NameLable.setName("NameLable"); // NOI18N
+                NameLable.setBackground(new java.awt.Color(255, 255, 255));
+                NameLable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                NameLable.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/signature.png"))); // NOI18N
+                NameLable.setLabelFor(NameLable);
+                NameLable.setText("Name");
+                NameLable.setName("NameLable"); // NOI18N
 
-        phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
-        phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        phoneLable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/smartphone.png"))); // NOI18N
-        phoneLable1.setLabelFor(phoneNumber);
-        phoneLable1.setText("Phone Number");
-        phoneLable1.setName("phoneLable1"); // NOI18N
+                phoneLable1.setBackground(new java.awt.Color(255, 255, 255));
+                phoneLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                phoneLable1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/smartphone.png"))); // NOI18N
+                phoneLable1.setLabelFor(phoneNumber);
+                phoneLable1.setText("Phone Number");
+                phoneLable1.setName("phoneLable1"); // NOI18N
 
-        addressF.setName("addressF"); // NOI18N
+                addressF.setText("sad123");
+                addressF.setToolTipText("");
+                addressF.setName("addressF"); // NOI18N
 
-        NameLable1.setBackground(new java.awt.Color(255, 255, 255));
-        NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        NameLable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/address.png"))); // NOI18N
-        NameLable1.setLabelFor(NameLable);
-        NameLable1.setText("Address");
-        NameLable1.setName("NameLable1"); // NOI18N
+                NameLable1.setBackground(new java.awt.Color(255, 255, 255));
+                NameLable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                NameLable1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/address.png"))); // NOI18N
+                NameLable1.setLabelFor(NameLable);
+                NameLable1.setText("Address");
+                NameLable1.setName("NameLable1"); // NOI18N
 
-        deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
-        deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        deleteButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
-        deleteButton1.setText("Delete Account");
-        deleteButton1.setBorder(null);
-        deleteButton1.setName("deleteButton1"); // NOI18N
-        deleteButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButton1ActionPerformed(evt);
-            }
-        });
+                deleteButton1.setBackground(new java.awt.Color(240, 240, 240));
+                deleteButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+                deleteButton1.setIcon(new javax.swing.ImageIcon(
+                                getClass().getResource("/com/mycompany/swing/Icons/delete.png"))); // NOI18N
+                deleteButton1.setText("Delete Account");
+                deleteButton1.setBorder(null);
+                deleteButton1.setName("deleteButton1"); // NOI18N
+                deleteButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteButton1ActionPerformed(evt);
+                        }
+                });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(NameLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(phoneLable1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addComponent(NameLable1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(addressF, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(31, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(deleteBook, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(deleteButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                        .addGap(62, 62, 62)
-                        .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(phoneLable1)
-                .addGap(14, 14, 14)
-                .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NameLable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NameLable1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addressF, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(deleteBook, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
-        );
+                javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+                jPanel2.setLayout(jPanel2Layout);
+                jPanel2Layout.setHorizontalGroup(
+                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel2Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGroup(jPanel2Layout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addGroup(jPanel2Layout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addComponent(addButton,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                165,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addPreferredGap(
+                                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                Short.MAX_VALUE)
+                                                                                                                                .addComponent(clearButton,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                165,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                                .addComponent(NameLable,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                Short.MAX_VALUE)
+                                                                                                                .addComponent(phoneLable1,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                Short.MAX_VALUE)
+                                                                                                                .addGroup(jPanel2Layout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGap(6, 6, 6)
+                                                                                                                                .addComponent(phoneNumber,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                360,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                                                                                .addContainerGap())
+                                                                                .addComponent(NameLable1,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
+                                                                                .addGroup(jPanel2Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(6, 6, 6)
+                                                                                                .addGroup(jPanel2Layout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addComponent(Name,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                361,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addComponent(addressF,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                361,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                .addContainerGap(31,
+                                                                                                                Short.MAX_VALUE))
+                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                jPanel2Layout.createSequentialGroup()
+                                                                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                                                                .addComponent(deleteBook,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                165,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addGap(113, 113,
+                                                                                                                                113))
+                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                jPanel2Layout.createSequentialGroup()
+                                                                                                                .addComponent(deleteButton1,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                165,
+                                                                                                                                Short.MAX_VALUE)
+                                                                                                                .addGap(62, 62, 62)
+                                                                                                                .addComponent(updateButton,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                165,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addContainerGap()))));
+                jPanel2Layout.setVerticalGroup(
+                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addGap(13, 13, 13)
+                                                                .addComponent(phoneLable1)
+                                                                .addGap(14, 14, 14)
+                                                                .addComponent(phoneNumber,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                49,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(NameLable)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(Name,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                49,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(NameLable1)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(addressF,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                49,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                34, Short.MAX_VALUE)
+                                                                .addComponent(deleteBook,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                41,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(27, 27, 27)
+                                                                .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                .addComponent(addButton,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                41,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(clearButton,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                41,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(38, 38, 38)
+                                                                .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                .addComponent(updateButton,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                41,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(deleteButton1,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                41,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(25, 25, 25)));
 
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
+                jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-        booked.setBackground(new java.awt.Color(225, 225, 225));
-        booked.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        booked.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                booked.setBackground(new java.awt.Color(225, 225, 225));
+                booked.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+                booked.setModel(new javax.swing.table.DefaultTableModel(
+                                new Object[][] {
 
-            },
-            new String [] {
-                "Email", "Name", "Phone Number", "Address"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
+                                },
+                                new String[] {
+                                                "Email", "Name", "Phone Number", "Address"
+                                }) {
+                        Class[] types = new Class[] {
+                                        java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                                        java.lang.String.class
+                        };
+                        boolean[] canEdit = new boolean[] {
+                                        false, false, false, false
+                        };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+                        public Class getColumnClass(int columnIndex) {
+                                return types[columnIndex];
+                        }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        booked.setFocusable(false);
-        booked.setGridColor(new java.awt.Color(255, 255, 255));
-        booked.setName("booked"); // NOI18N
-        booked.setShowGrid(true);
-        jScrollPane1.setViewportView(booked);
+                        public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return canEdit[columnIndex];
+                        }
+                });
+                booked.setFocusable(false);
+                booked.setGridColor(new java.awt.Color(255, 255, 255));
+                booked.setName("booked"); // NOI18N
+                booked.setShowGrid(true);
+                jScrollPane1.setViewportView(booked);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
-                .addComponent(jScrollPane1)
-                .addGap(122, 122, 122))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
-                        .addGap(167, 167, 167))))
-        );
+                javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+                jPanel1.setLayout(jPanel1Layout);
+                jPanel1Layout.setHorizontalGroup(
+                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addComponent(jPanel2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(115, 115, 115)
+                                                                .addComponent(jScrollPane1)
+                                                                .addGap(122, 122, 122)));
+                jPanel1Layout.setVerticalGroup(
+                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGap(23, 23, 23)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel1Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addComponent(jPanel2,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addContainerGap(
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE))
+                                                                                .addGroup(jPanel1Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addComponent(jScrollPane1,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                489,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addGap(167, 167,
+                                                                                                                167)))));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 286, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+                getContentPane().setLayout(layout);
+                layout.setHorizontalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jPanel1,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(0, 286, Short.MAX_VALUE)));
+                layout.setVerticalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jPanel1,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(0, 0, Short.MAX_VALUE)));
 
-        jPanel1.getAccessibleContext().setAccessibleName("Book phone");
+                jPanel1.getAccessibleContext().setAccessibleName("Book phone");
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+                pack();
+        }// </editor-fold>//GEN-END:initComponents
 
         private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {
                 String name = Name.getText();
-                String phoneToUpdate = phoneNumber.getText();
+                String phone = phoneNumber.getText();
                 String address = addressF.getText();
 
-                boolean validName = use.validName(name);
-                boolean validPhone = use.validPhone(phoneToUpdate);
-                boolean validAddress = use.validAddress(address);
+                boolean validName = false, validPhone = false, validAddress = false;
+                DefaultTableModel model = (DefaultTableModel) booked.getModel();
 
-                if (validName && validPhone && validAddress) {
-                        String Email = JOptionPane.showInputDialog("Enter your Email:");
-                        // String phone = JOptionPane.showInputDialog("Enter your phone number that is
-                        // used in booking:");
-
-                        if (Email != null && !Email.isEmpty()
-                                        && !phoneToUpdate.isEmpty()) {
-
-                                // Check if the ID exists
-                                if (conts.emailExists(Email)) {
-                                        try {
-                                                // Get the encrypted phone number using the ID
-                                                Contact userToUpdate = conts.returnEmailObj(Email);
-                                                String encryptedPhoneToUpdate = PhoneNumberEncryptor
-                                                                .decrypt(userToUpdate.geteEmail());
-
-                                                if (phoneToUpdate.equals(encryptedPhoneToUpdate)) {
-                                                        if (!conts.isDuplicatedEdit(Email, phoneToUpdate)) {
-                                                                DefaultTableModel model = (DefaultTableModel) booked
-                                                                                .getModel();
-                                                                for (int i = 0; i < model.getRowCount(); i++) {
-                                                                        if (model.getValueAt(i, 0).equals(Email)) {
-                                                                                // Update the row with the new data
-                                                                                model.setValueAt(name, i, 1);
-                                                                                if (!phoneToUpdate.equals(
-                                                                                                encryptedPhoneToUpdate)) {
-                                                                                        model.setValueAt(
-                                                                                                        PhoneNumberEncryptor
-                                                                                                                        .encrypt(phoneToUpdate),
-                                                                                                        i, 2);
-                                                                                }
-
-                                                                                model.setValueAt(address, i, 3);
-
-                                                                                JOptionPane.showMessageDialog(null,
-                                                                                                "Contact information has been updated successfully.",
-                                                                                                "Update Successful",
-                                                                                                JOptionPane.INFORMATION_MESSAGE);
-
-                                                                                if (!phoneToUpdate.isEmpty()
-                                                                                                || !name.isEmpty()
-                                                                                                || !address.isEmpty()) {
-                                                                                        Name.setText("");
-                                                                                        phoneNumber.setText("");
-                                                                                        addressF.setText("");
-                                                                                }
-                                                                                break;
-                                                                        }
-
-                                                                }
-
+                if (phone.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Please fill out the phone number field",
+                                        "Missing Information", JOptionPane.WARNING_MESSAGE);
+                } else {
+                        if (use.validPhone(phone)) {
+                                validPhone = true;
+                                if (name.isEmpty()) {
+                                        JOptionPane.showMessageDialog(null, "Please fill out the name field",
+                                                        "Missing Information", JOptionPane.WARNING_MESSAGE);
+                                } else {
+                                        if (use.validName(name)) {
+                                                validName = true;
+                                                if (address.isEmpty()) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Please fill out the address field",
+                                                                        "Missing Information",
+                                                                        JOptionPane.WARNING_MESSAGE);
+                                                } else {
+                                                        if (use.validAddress(address)) {
+                                                                validAddress = true;
                                                         } else {
                                                                 JOptionPane.showMessageDialog(null,
-                                                                                "The phone number in the input field is duplicated, please enter another one",
-                                                                                "Duplicated Phone Number",
-                                                                                JOptionPane.INFORMATION_MESSAGE);
-
+                                                                                "Please enter a valid address",
+                                                                                "Invalid Information",
+                                                                                JOptionPane.WARNING_MESSAGE);
                                                         }
-
-                                                } else {
-                                                        // Display a message indicating that the entered phone number
-                                                        // does not match the provided ID
-                                                        JOptionPane.showMessageDialog(null,
-                                                                        "Phone number does not match the provided ID.",
-                                                                        "Update Failed", JOptionPane.WARNING_MESSAGE);
                                                 }
-                                        } catch (Exception e) {
-                                                e.printStackTrace(); // Handle the exception appropriately for your
-                                                                     // application
+                                        } else {
+                                                JOptionPane.showMessageDialog(null, "Please enter a valid name",
+                                                                "Invalid Information", JOptionPane.WARNING_MESSAGE);
                                         }
-                                } else {
-                                        // Display a message indicating that the ID does not exist
-                                        JOptionPane.showMessageDialog(null, "ID not found. Update failed.",
-                                                        "Update Failed", JOptionPane.WARNING_MESSAGE);
                                 }
                         } else {
-                                // Display a message indicating that the user canceled the update process
-                                JOptionPane.showMessageDialog(null, "Update canceled. No ID or phone number entered.",
-                                                "Update Canceled", JOptionPane.WARNING_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Please enter a valid phone number",
+                                                "Invalid Information", JOptionPane.WARNING_MESSAGE);
                         }
-                } else {
-                        // Display a message indicating that the entered data is not valid
-                        JOptionPane.showMessageDialog(null, "Invalid data entered. Please check your inputs.",
-                                        "Invalid Data", JOptionPane.WARNING_MESSAGE);
+
+                        if (validAddress && validName && validPhone) {
+                                try {
+                                        // Encrypt the phone number before adding to the table
+                                        if (!conts.isDuplicated(phone)) {
+                                                int emailId = Integer
+                                                                .parseInt(JOptionPane.showInputDialog("Enter your ID"));
+                                                String email = (JOptionPane.showInputDialog("Enter your email"));
+                                                String BookPhone = (JOptionPane.showInputDialog(
+                                                                "Enter the phone number that you used for booking"));
+
+                                                if (conts.emailAndIdExists(emailId, email)) {
+                                                        if (conts.exists(BookPhone)) {
+                                                                Contact search = conts.returnPhoneObjById(emailId);
+                                                                String objectEPhone = search.getephone();
+                                                                DefaultTableModel model1 = (DefaultTableModel) booked
+                                                                                .getModel();
+
+                                                                for (int i = 0; i < model1.getRowCount(); i++) {
+                                                                        if (!phone.equals(objectEPhone)) {
+                                                                                String enPhone = PhoneNumberEncryptor
+                                                                                                .encrypt(phone);
+                                                                                model1.setValueAt(enPhone, i,
+                                                                                                2);
+                                                                                search.setPhone(phone);
+                                                                                search.setephone(enPhone);
+                                                                        }
+                                                                        if (!address.equals(
+                                                                                        search.getAddress())) {
+
+                                                                                model1.setValueAt(address, i,
+                                                                                                3);
+                                                                                search.setAddress(address);
+                                                                        }
+                                                                        if (!name.equals(search.getName())) {
+                                                                                model1.setValueAt(name, i, 1);
+                                                                                search.setName(name);
+                                                                        }
+                                                                        // Exit the loop after updating the row
+                                                                        break;
+                                                                }
+                                                        } else {
+                                                                JOptionPane.showMessageDialog(null,
+                                                                                "The entered phone number doesn't exist",
+                                                                                "Invalid input",
+                                                                                JOptionPane.WARNING_MESSAGE);
+                                                        }
+                                                } else {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "This ID isn't connected to this email",
+                                                                        "Invalid input", JOptionPane.WARNING_MESSAGE);
+                                                }
+
+                                                if (!phone.isEmpty() || !name.isEmpty() || !address.isEmpty()) {
+                                                        Name.setText("");
+                                                        phoneNumber.setText("");
+                                                        addressF.setText("");
+                                                }
+                                        } else {
+                                                JOptionPane.showMessageDialog(null,
+                                                                "This phone number is already in the system, please enter another one",
+                                                                "Invalid Information", JOptionPane.WARNING_MESSAGE);
+                                        }
+                                } catch (Exception e) {
+                                        e.printStackTrace();
+                                        JOptionPane.showMessageDialog(null,
+                                                        "Error while encrypting the phone number",
+                                                        "Encryption Error", JOptionPane.ERROR_MESSAGE);
+                                }
+                        }
                 }
         }
-
-        // GEN-LAST:event_updateButtonActionPerformed
 
         private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearButtonActionPerformed
                 String name = Name.getText();
@@ -427,13 +556,16 @@ public class NewJFrame extends javax.swing.JFrame {
                                 if (conts.idExists(id)) {
                                         if (conts.emailExists(emailToDelete)) {
                                                 try {
-                                                        // Get the encrypted phone number using the ID
-                                                        Contact userToDelete = conts.returnPhoneObjById(id);
+                                                        Contact userToDelete = conts.returnBook(emailToDelete, id);
+                                                        System.out.println(userToDelete.getBook());
                                                         String en = userToDelete.geteEmail();
                                                         DefaultTableModel model = (DefaultTableModel) booked.getModel();
                                                         for (int i = 0; i < model.getRowCount(); i++) {
                                                                 if (model.getValueAt(i, 0).equals(en)) {
                                                                         model.removeRow(i);
+                                                                        conts.deleteBookedContactsViaEmail(
+                                                                                        emailToDelete);
+                                                                        use.displayAll();
                                                                         break;
                                                                 }
                                                         }
@@ -479,14 +611,16 @@ public class NewJFrame extends javax.swing.JFrame {
 
                 if (userEmail != null && !userEmail.isEmpty()) {
                         if (conts.emailExists(userEmail)) {
-
+                                System.out.println("Found your email for deleteion");
                                 Contact obj = conts.returnEmailObj(userEmail);
+                                System.out.println(obj.geteEmail());
                                 String encrypted = obj.geteEmail();
                                 DefaultTableModel model = (DefaultTableModel) booked.getModel();
                                 for (int i = 0; i < model.getRowCount(); i++) {
                                         if (model.getValueAt(i, 0).equals(encrypted)) {
                                                 model.removeRow(i);
                                         }
+                                        conts.deleteAccount(userEmail);
                                 }
                                 conts.deleteContactsViaEmail(userEmail);
                                 JOptionPane.showMessageDialog(null, "Your account has been deleted",
@@ -566,30 +700,40 @@ public class NewJFrame extends javax.swing.JFrame {
                                                 if (conts.idExists(emailId)) {
                                                         Contact search = conts.returnPhoneObjById(emailId);
                                                         String objEmail = search.getEmail();
-                                                        String encryptedEmail = PhoneNumberEncryptor.encrypt(objEmail);
+                                                        System.out.println("I found the ID");
+                                                        System.err.println(objEmail);
+                                                        String encryptedEmail = EmailEncryptor.encrypt(objEmail);
                                                         String encryptedPhone = PhoneNumberEncryptor.encrypt(phone);
+                                                        System.out.println("i reached encrypted phone" + phone);
+                                                        search.setAddress(address);
+                                                        search.setPhone(phone);
+                                                        search.seteEmail(encryptedEmail);
 
                                                         Contact obj = new Contact(name, phone, encryptedPhone, address,
                                                                         objEmail, encryptedEmail);
+                                                        obj.setID(emailId);
+                                                        obj.setBook(1);
                                                         conts.addContact(obj); // Use the addContact method consistently
                                                         System.out.println(obj.getID());
-                                                        model.addRow(new Object[] { obj.getID(), encryptedEmail, name,
+                                                        model.addRow(new Object[] { encryptedEmail, name,
                                                                         encryptedPhone,
                                                                         address });
-                                                        JOptionPane.showMessageDialog(null,
-                                                                        "Please note that your booking id is : "
-                                                                                        + obj.getID(),
-                                                                        "successful booking",
-                                                                        JOptionPane.INFORMATION_MESSAGE);
+                                                        use.displayAll();
                                                         if (!phone.isEmpty() || !name.isEmpty()
                                                                         || !address.isEmpty()) {
                                                                 Name.setText("");
                                                                 phoneNumber.setText("");
                                                                 addressF.setText("");
                                                         }
+                                                } else {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "invalid id connected your email",
+                                                                        "Invalid Information",
+                                                                        JOptionPane.WARNING_MESSAGE);
                                                 }
+                                        }
 
-                                        } else {
+                                        else {
                                                 JOptionPane.showMessageDialog(null,
                                                                 "This phone number is already in the system, please enter another one",
                                                                 "Invalid Information", JOptionPane.WARNING_MESSAGE);
@@ -650,21 +794,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 });
         }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Name;
-    private javax.swing.JLabel NameLable;
-    private javax.swing.JLabel NameLable1;
-    private javax.swing.JButton addButton;
-    private javax.swing.JTextField addressF;
-    private javax.swing.JTable booked;
-    private javax.swing.JButton clearButton;
-    private javax.swing.JButton deleteBook;
-    private javax.swing.JButton deleteButton1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JLabel phoneLable1;
-    private javax.swing.JTextField phoneNumber;
-    private javax.swing.JButton updateButton;
-    // End of variables declaration//GEN-END:variables
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JTextField Name;
+        private javax.swing.JLabel NameLable;
+        private javax.swing.JLabel NameLable1;
+        private javax.swing.JButton addButton;
+        private javax.swing.JTextField addressF;
+        private javax.swing.JTable booked;
+        private javax.swing.JButton clearButton;
+        private javax.swing.JButton deleteBook;
+        private javax.swing.JButton deleteButton1;
+        private javax.swing.JPanel jPanel1;
+        private javax.swing.JPanel jPanel2;
+        private javax.swing.JTextField jTextField2;
+        private javax.swing.JLabel phoneLable1;
+        private javax.swing.JTextField phoneNumber;
+        private javax.swing.JButton updateButton;
+        // End of variables declaration//GEN-END:variables
 }
