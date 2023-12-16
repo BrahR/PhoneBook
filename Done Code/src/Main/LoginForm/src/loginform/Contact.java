@@ -11,56 +11,24 @@ public class Contact {
     private String eEmail = "";
     private String address;
     private String email;
-    private String password;
     private int ID = -1;
-    private int book = 0;
-    static Set<Integer> randomIds = new HashSet<>();
 
     public Contact() {
     }
 
-    public Contact(String name, String phone, String Ephone, String address, String email, String eEmail) {
-        giveRandomId();
+    public Contact(String name, String phone, String Ephone, String address, String email, String eEmail,int id) {
         setName(name);
         setAddress(address);
         setPhone(phone);
         setEmail(email);
         this.ePhone = Ephone;
         this.eEmail = eEmail;
-        System.out.println(this.ID);
+        this.ID = id;
     }
 
     public Contact(String email, String password) {
         System.out.println("two paras");
-        giveRandomId();
         setEmail(email);
-        setPass(password);
-
-    }
-
-    {
-        addIds();
-    }
-
-    private void addIds() {
-        int desiredSize = 1200;
-        while (randomIds.size() < desiredSize) {
-            int random = 0;
-            while (random == 0) {
-                random = (int) (Math.random() * Math.pow(10, 5));
-            }
-            randomIds.add(random);
-        }
-    }
-    
-    public void giveRandomId() {
-        Iterator<Integer> iterator = randomIds.iterator();
-        if (iterator.hasNext()) {
-            this.ID = iterator.next();
-            iterator.remove();
-        } else {
-            System.err.println("No more available IDs");
-        }
     }
 
     public String getephone() {
@@ -94,9 +62,9 @@ public class Contact {
     }
 
     public void setPhone(String phone) {
-        
-            this.phone = phone;
-        
+
+        this.phone = phone;
+
     }
 
     public String getAddress() {
@@ -114,33 +82,16 @@ public class Contact {
     }
 
     public void setEmail(String email) {
-        if (validEmail(email)) {
-            this.email = email;
-        }
-    }
 
-    public String getPass() {
-        return this.password;
-    }
-
-    public void setPass(String password) {
-        if (isValidPassword(password)) {
-            this.password = password;
-        }
+        this.email = email;
     }
 
     public int getID() {
         return this.ID;
     }
 
-    public int getBook() {
-        return this.book;
-    }
-
-    public void setBook(int n) {
-        this.book=n;
-    }
-    boolean validPhone(String phone) {
+    static boolean validPhone(String phone) {
+        phone=phone.trim();
         if (phone.matches("^(01[0-2]|015)\\d{8}$")) {
             return true;
         }
@@ -153,6 +104,7 @@ public class Contact {
     }
 
     static boolean validName(String name) {
+        name = name.trim();
         if (name.matches("[a-zA-Z ]*")) {
             return true;
         }
@@ -160,33 +112,16 @@ public class Contact {
         return false;
     }
 
-    boolean validEmail(String email) {
-        if (email.matches(("^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"))) {
-            return true;
-        }
-        System.out.println("Invalid email: " + email);
-        return false;
-    }
-
-    boolean validAddress(String email) {
-        if (email.matches(("^[a-zA-Z0-9.,\\s]+$"))) {
+    static boolean validAddress(String address) {
+        address = address.trim();
+        if (address.matches(("^[a-zA-Z0-9.,\\s]+$"))) {
             return true;
         }
         System.out.println("Invalid address, please Enter a valid one");
         return false;
     }
 
-    public boolean isValidPassword(String password) {
-        if (password.matches("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")) {
-            return true;
-        }
-        System.out.println("Invalid password: " + password);
-        return false;
-    }
-
     public void setID(int id) {
         this.ID = id;
     }
-
-
 }
