@@ -412,7 +412,19 @@ public class SignUp extends javax.swing.JFrame {
             new Validate(
                 filledPassword.equals(filledConfirmPassword),
                 "passwords aren't indetical",
-                "Invalid input"))))
+                "Invalid input")))
+            
+        &&
+        Utils.displayError(
+             new Validate(
+             Registration.validEmail(filledEmail),
+             "Already Registed Email",
+              "Duplicated Email")
+        )
+        
+            
+            )
+        
     return;
 
     if (rootPaneCheckingEnabled) {
