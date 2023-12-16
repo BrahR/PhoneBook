@@ -46,13 +46,14 @@ public class RegistrationForm {
     System.out.println("Registration added with ID: " + registration.getID());
   }
 
-  public static boolean emailExists(String email) {
+  public static boolean emailDoesntExists(String email) {
     for (Registration registration : form) {
       if (registration.getEmail().equals(email)) {
-        return true;
+        System.out.println(registration.getEmail() +" "+email);
+        return false;
       }
     }
-    return false;
+    return true;
   }
 
   public static boolean isValidLogin(String email, String password) {
