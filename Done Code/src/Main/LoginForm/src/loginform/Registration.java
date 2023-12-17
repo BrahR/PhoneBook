@@ -10,11 +10,21 @@ public class Registration {
   private String password;
   private int ID = -1;
   private String encryptedEmail;
+  private boolean admin = false;
 
   public Registration(String email, String password) {
     giveRandomId();
     setEmail(email);
     setPass(password);
+  }
+
+  public Registration(boolean admin) {
+    if (admin) {
+      this.email = "admin";
+      this.password = "admin";
+      this.admin = true;
+      this.ID = 69;
+    }
   }
 
   {
@@ -45,19 +55,29 @@ public class Registration {
     // setID(getID() + 2);
     int desiredSize = 1200;
     while (randomIds.size() < desiredSize) {
-        int random = 0;
-        while (random == 0) {
-            random = (int) (Math.random() * Math.pow(10, 5));
-        }
-        randomIds.add(random);
+      int random = 0;
+      while (random == 0) {
+        random = (int) (Math.random() * Math.pow(10, 5));
+      }
+      randomIds.add(random);
     }
   }
 
   public void giveRandomId() {
     Iterator<Integer> iterator = randomIds.iterator();
     if (iterator.hasNext()) {
-      this.ID = iterator.next();
-      iterator.remove();
+      while (iterator.hasNext()) {
+        int potentialId = iterator.next();
+        if (
+          RegistrationForm.form
+            .stream()
+            .noneMatch(account -> account.getID() == potentialId)
+        ) {
+          this.ID = potentialId;
+          iterator.remove();
+          return;
+        }
+      }
     } else {
       System.err.println("No more available IDs");
     }

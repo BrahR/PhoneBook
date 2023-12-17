@@ -37,7 +37,7 @@ import java.util.ArrayList;
  */
 public class RegistrationForm {
 
-  static ArrayList<Registration> form = new ArrayList<>();
+  public static ArrayList<Registration> form = new ArrayList<>();
 
   public RegistrationForm() {}
 
@@ -49,7 +49,7 @@ public class RegistrationForm {
   public static boolean emailDoesntExists(String email) {
     for (Registration registration : form) {
       if (registration.getEmail().equals(email)) {
-        System.out.println(registration.getEmail() +" "+email);
+        System.out.println(registration.getEmail() + " " + email);
         return false;
       }
     }
@@ -69,8 +69,6 @@ public class RegistrationForm {
     System.out.println("Invalid Email or Password");
     return false;
   }
-
-
 
   public static Registration returnObjViaId(int id) {
     return form
@@ -94,14 +92,30 @@ public class RegistrationForm {
     return false;
   }
 
+    public static Registration returnObjViaEmail(String email) {
+    for (Registration obj : form) {
+      System.out.println(obj.getEmail() .equals(email));
+      if (obj.getEmail() .equals(email)) {
+        return obj;
+      }
+    }
+    return null;
+  }
   public static boolean checkAccountDeletion(int id, String email) {
     return form
-        .stream()
-        .anyMatch(fo -> fo.getID() == id && fo.getEmail().equals(email));
+      .stream()
+      .anyMatch(fo -> fo.getID() == id && fo.getEmail().equals(email));
   }
 
   public static void deleteAccount(String email) {
     form.removeIf(co -> co.getEmail().equals(email));
     BookedContacts.contacts.removeIf(co -> co.getEmail().equals(email));
+  }
+
+  public static boolean checkAdmin(String Email, String password) {
+    if (Email.equals("admin") && password.equals("admin")) {
+      return true;
+    }
+    return false;
   }
 }

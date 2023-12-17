@@ -113,5 +113,13 @@ public class BookedContacts {
     }
     return false;
   }
+    public static Contact returnBookedObjViaEmail(String Email) {
+    for (Contact obj : contacts) {
+      if (obj.getEmail().equals(Email)) {
+        return obj;
+      }
+    }
+    return null;
+  }
 
 }
